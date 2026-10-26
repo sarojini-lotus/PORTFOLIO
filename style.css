@@ -1,0 +1,132 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 90px; }
+
+/* ===== BODY: green wave background (image 2) ===== */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #02210f url("./bg.jpeg") center / cover fixed no-repeat;
+}
+
+/* ===== NAVBAR ===== */
+.box1 {
+  height: 80px; display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 1000; padding: 0 5%;
+  background: rgba(2, 33, 15, 0.92); border-bottom: 2px solid #20a65a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.mbox { display: flex; align-items: center; gap: 25px; font-weight: 600; }
+.mbox a { text-decoration: none; color: #fff; transition: 0.3s; }
+.mbox a:hover { color: #5dff9a; }
+.mbox .download-btn {
+  padding: 8px 20px; border: 2px solid #20a65a; border-radius: 40px; color: #5dff9a;
+}
+.mbox .download-btn:hover { background: #20a65a; color: #fff; }
+.mobile-icon { display: none; font-size: 24px; color: #fff; cursor: pointer; }
+
+/* ===== HERO ===== */
+.box2 { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 5%; min-height: 70vh; }
+.box2a { flex: 1; }
+.box2a b { display: block; font-size: 48px; line-height: 1.2; color: #fff; margin-bottom: 20px; }
+.box2a p { font-size: 20px; color: #d8f5e3; }
+.box2b { flex: 1; display: flex; justify-content: center; animation: floatImage 5s ease-in-out infinite alternate; }
+.box2b img { width: 370px; height: 450px; object-fit: cover; object-position: center 15%; border-radius: 40%; transition: 0.4s; }
+.box2b img:hover { box-shadow: 0 0 30px rgba(32, 166, 90, 0.7); transform: scale(1.03); }
+@keyframes floatImage { to { transform: translateY(-15px); } }
+
+/* ===== SECTION TITLES ===== */
+.section-title { text-align: center; margin: 50px 0 30px; }
+.section-title h2 { font-size: 32px; color: #fff; text-transform: uppercase; }
+
+/* ===== ABOUT ME (image 1: text left, girl on right) ===== */
+.about-hero {
+  min-height: 520px; display: flex; align-items: center; padding: 40px 5%;
+  background:
+    linear-gradient(90deg, rgba(2, 25, 12, 0.92) 0%, rgba(2, 25, 12, 0.75) 40%, rgba(2, 25, 12, 0) 62%),
+    url("./girls.jpeg") right center / cover no-repeat;
+}
+.about-text { width: 50%; color: #fff; }
+.about-text h2 { font-size: 32px; text-transform: uppercase; margin-bottom: 15px; }
+.about-text p { font-size: 18px; color: #e6fbee; }
+
+/* ===== ABOUT ME 2 (two boxes close together) ===== */
+.about2 { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 20px 5%; }
+.about2 .smallbox1 { width: 100%; max-width: 380px; }
+
+/* ===== BOXES ===== */
+.box3b { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; padding: 20px 5%; }
+.smallbox1 {
+  background: rgba(255, 255, 255, 0.95); padding: 30px 20px; border-radius: 10px;
+  border: 2px solid #20a65a; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); transition: 0.4s;
+}
+.smallbox1:hover { background: #20a65a; color: #fff; transform: translateY(-7px); }
+.smallbox1:hover h2, .smallbox1:hover h3, .smallbox1:hover p,
+.smallbox1:hover li, .smallbox1:hover b, .smallbox1:hover a { color: #fff; }
+.smallbox1 h2 { font-size: 18px; margin-bottom: 15px; }
+.smallbox1 ul { padding-left: 20px; }
+
+.icon {
+  width: 50px; height: 50px; border-radius: 50%; background: #e4f7eb; color: #20a65a;
+  border: 2px solid #20a65a; display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 20px; transition: 0.3s;
+}
+.smallbox1:hover .icon { background: #fff; border-color: #fff; }
+
+/* ===== SKILLS ===== */
+.box4-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 20px 5%; }
+.product-card {
+  min-height: 300px; display: flex; align-items: flex-end; padding: 20px;
+  background-size: cover; background-position: center; border: 2px solid #20a65a;
+  border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); transition: 0.4s;
+}
+.product-card:hover { transform: translateY(-7px); box-shadow: 0 10px 25px rgba(32, 166, 90, 0.5); }
+.inbox4 {
+  width: 100%; padding: 20px; border-radius: 8px; border: 2px solid #20a65a;
+  background: rgba(255, 255, 255, 0.95); transition: 0.4s;
+}
+.inbox4:hover { background: #20a65a; color: #fff; }
+.inbox4 h2 { font-size: 18px; margin-bottom: 10px; }
+.inbox4 p { margin-bottom: 6px; }
+
+/* ===== PROJECTS ===== */
+.fullstack { grid-column: 1 / -1; }
+.fullstack h3 { font-size: 16px; margin-top: 18px; }
+.fullstack em { color: #666; font-weight: normal; }
+.fullstack a { color: #20a65a; font-weight: bold; text-decoration: none; }
+.fullstack a:hover { text-decoration: underline; }
+.fullstack ul { margin-top: 5px; }
+
+/* ===== CONTACT ===== */
+.two-col { grid-template-columns: repeat(2, 1fr); }
+.box6-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; padding: 40px 5%; }
+.qr-card { background: rgba(255,255,255,0.95); border: 2px solid #20a65a; border-radius: 10px; padding: 25px; text-align: center; }
+.qr-card h3 { margin-bottom: 15px; }
+.qr-card #qr { display: flex; justify-content: center; margin-bottom: 10px; }
+.qr-card p { color: #555; font-size: 14px; }
+.contact-info-item {
+  display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; padding: 15px;
+  border: 2px solid #20a65a; border-radius: 8px; color: #fff; transition: 0.4s;
+  background: rgba(2, 33, 15, 0.6);
+}
+.contact-info-item a { color: #fff; }
+.contact-info-item i { font-size: 24px; color: #5dff9a; }
+.contact-info-item:hover { background: #20a65a; transform: translateX(5px); }
+.contact-info-item:hover i { color: #fff; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .box2 { flex-direction: column; text-align: center; }
+  .about-text { width: 65%; }
+}
+@media (max-width: 768px) {
+  .mbox { display: none; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0;
+          background: rgba(2, 33, 15, 0.97); padding: 20px; }
+  .mbox.open { display: flex; }
+  .mobile-icon { display: block; }
+  .box2a b { font-size: 32px; }
+  .about-hero { background-position: 75% center; }
+  .about-text { width: 100%; }
+  .two-col, .box6-container { grid-template-columns: 1fr; }
+}
